@@ -12,10 +12,10 @@ pipeline {
                 script {
                    gv = load "script.groovy" 
                 }
-                withGradle {
-                    sh "chmod 777 gradlew"
-                    sh "./gradlew -v"
-                }
+                // withGradle {
+                //     sh "chmod 777 gradlew"
+                //     sh "./gradlew -v"
+                // }
             }
         }
         stage("build") {
@@ -23,9 +23,9 @@ pipeline {
                 script {
                     gv.buildApp()
                 }
-                withGradle {
-                    sh "./gradlew build"
-                }
+                // withGradle {
+                //     sh "./gradlew build"
+                // }
             }
         }
         stage("test") {
