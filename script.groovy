@@ -1,3 +1,5 @@
+import static org.jenkinsci.plugins.github.pullrequest.utils.JobHelper.ghPRTriggerFromJob
+
 def buildApp() {
     echo 'building the application...'
 } 
